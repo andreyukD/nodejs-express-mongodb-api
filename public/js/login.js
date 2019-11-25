@@ -35,7 +35,8 @@ export const logout = async () => {
     });
 
     if (res.data.status === 'success') {
-      location.reload(true); //force reload from the server
+      //location.reload(true); //force reload from the server
+      location.assign('/');
       // у меня выбрасывает ошибку, но выходит норм. хз в чём дело, не разобрался
     }
   } catch (err) {

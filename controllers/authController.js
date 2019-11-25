@@ -92,7 +92,7 @@ exports.isLoggedIn = async (req, res, next) => {
       res.locals.user = currentUser; //каждый темплейт имеет доступ к локалсам, это по типу как передаем данные в render
       return next();
     } catch (err) {
-      next();
+      return next();
     }
   }
   next();
